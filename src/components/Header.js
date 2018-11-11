@@ -45,10 +45,11 @@ class Header extends React.Component {
           }}
           >
             <Toolbar>
+            
               <div className="header_logo">
                 <div className="font_righteous header_logo_venue">The Venue</div>
-
                 <div className="header_logo_title">Musical Events</div>
+              </div>
 
                 <IconButton 
                   aria-label="Menu" 
@@ -61,7 +62,7 @@ class Header extends React.Component {
                   open={this.state.drawerOpen}
                   onClose={() => this.toggleDrawer()}
                 />
-              </div>
+              
             </Toolbar>
         </AppBar>
       </header>
