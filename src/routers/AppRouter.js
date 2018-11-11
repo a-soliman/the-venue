@@ -12,7 +12,7 @@ export const history = createHistory();
 
 const AppRouter = () => (
   <Router history={history}>
-    <div>
+    <div style={{height:"1500px", background:"cornflowerBlue"}}>
       <Header />
       <Switch>
         <PublicRoute path="/" component={DashboardPage} exact={true} />
