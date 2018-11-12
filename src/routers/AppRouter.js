@@ -7,6 +7,7 @@ import LoginPage from '../components/LoginPage';
 import Header from '../components/Header';
 import Featured from '../components/Featured';
 import VenueInfo from '../components/VenueInfo';
+import Highlights from '../components/Highlights';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -18,6 +19,7 @@ const AppRouter = () => (
       <Header />
       <Featured />
       <VenueInfo />
+      <Highlights />
     </div>
   </Router>
 );
