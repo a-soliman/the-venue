@@ -6,6 +6,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import LoginPage from '../components/LoginPage';
 import Header from '../components/Header';
 import Featured from '../components/Featured';
+import VenueInfo from '../components/VenueInfo';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -16,6 +17,7 @@ const AppRouter = () => (
     <div style={{height:"1500px"}}>
       <Header />
       <Featured />
+      <VenueInfo />
     </div>
   </Router>
 );
