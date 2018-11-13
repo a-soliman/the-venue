@@ -18,7 +18,7 @@ class Pricing extends React.Component {
 
     fillInfoBoxes = () => (
         this.state.prices.map((box, i) => (
-            <div className="pricing_item">
+            <div className="pricing_item" key={i}  >
                 <Zoom delay={this.state.delay[i]} >
                     <InfoBox 
                         price={this.state.prices[i]}
@@ -26,7 +26,7 @@ class Pricing extends React.Component {
                         desc={this.state.desc[i]}
                         buttonTitle="Book Now"
                         buttonLink={this.state.linkto[i]}
-                        key={i} 
+                        
                     />
                 </Zoom>
             </div>
