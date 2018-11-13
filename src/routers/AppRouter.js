@@ -9,6 +9,7 @@ import Featured from '../components/Featured';
 import VenueInfo from '../components/VenueInfo';
 import Highlights from '../components/Highlights';
 import Pricing from '../components/Pricing';
+import Location from '../components/Location';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -22,6 +23,7 @@ const AppRouter = () => (
       <VenueInfo />
       <Highlights />
       <Pricing />
+      <Location />
     </div>
   </Router>
 );
