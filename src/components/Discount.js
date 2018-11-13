@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
+import MainButton from './MainButton';
 
 
 class Discount extends Component {
@@ -15,6 +16,10 @@ class Discount extends Component {
                 discountStart: this.state.discountStart + 1
             });
         }
+    };
+
+    handleButtonSubmit = () => {
+        console.log('clicked');
     };
 
     componentDidUpdate() {
@@ -43,7 +48,12 @@ class Discount extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec dignissim mauris. Sed tristique nisi quis ipsum cursus, non consequat nisl vulputate. Donec pellentesque malesuada libero, vitae scelerisque tellus dignissim eget. Donec aliquet, lectus ac vehicula ultrices, urna nisl rutrum dolor, ac tincidunt justo tortor a lectus. Donec quis eleifend ligula, ac pellentesque libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut fermentum diam elementum, fermentum urna non.</p>
 
                             <div>
-                                Button
+                                <MainButton 
+                                    title="Purchace Tickets" 
+                                    submit={this.handleButtonSubmit}
+                                    bck="#ffa800"
+                                    color="#ffffff"    
+                                />
                             </div>
                         </div>
                     </Slide>
