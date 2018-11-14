@@ -3,8 +3,7 @@ import MainButton from './MainButton'
 
 class InfoBox extends React.Component {
     handleButtonClick = () => {
-        console.log(this.props);
-        window.location = this.props.buttonLink
+        this.props.history.push(this.props.buttonLink);
     };
 
     render() {

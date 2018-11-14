@@ -26,7 +26,7 @@ class Pricing extends React.Component {
                         desc={this.state.desc[i]}
                         buttonTitle="Book Now"
                         buttonLink={this.state.linkto[i]}
-                        
+                        history={this.props.history}
                     />
                 </Zoom>
             </div>

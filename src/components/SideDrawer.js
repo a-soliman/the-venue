@@ -2,35 +2,51 @@ import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import { scroller } from 'react-scroll';
 
-const SideDrawer = (props) => (
-    <Drawer
-        anchor="right"
-        open={props.open}
-        onClose={() => props.onClose()}
-    >
-        <List component="nav">
-            <ListItem button onClick={() => console.log('Featured')} >
-                Event Starts in
-            </ListItem>
+const SideDrawer = (props) => {
 
-            <ListItem button onClick={() => console.log('Venue Info')} >
-                Venue Info
-            </ListItem>
+    const scrollToSection = (section) => {
+        props.onClose();
 
-            <ListItem button onClick={() => console.log('Highlights')} >
-                Highlights
-            </ListItem>
+        scroller.scrollTo(section, {
+            duration: 500,
+            delay: 50,
+            smooth: true,
+            offset: -100
+        });
+        
+    };
 
-            <ListItem button onClick={() => console.log('Pricing')} >
-                Pricing
-            </ListItem>
-
-            <ListItem button onClick={() => console.log('Location')} >
-                Location
-            </ListItem>
-        </List>
-    </Drawer>
-);
+    return (
+        <Drawer
+            anchor="right"
+            open={props.open}
+            onClose={() => props.onClose()}
+        >
+            <List component="nav">
+                <ListItem button onClick={() => scrollToSection('featured')} >
+                    Event Starts in
+                </ListItem>
+    
+                <ListItem button onClick={() => scrollToSection('venueInfo')} >
+                    Venue Info
+                </ListItem>
+    
+                <ListItem button onClick={() => scrollToSection('highlights')} >
+                    Highlights
+                </ListItem>
+    
+                <ListItem button onClick={() => scrollToSection('pricing')} >
+                    Pricing
+                </ListItem>
+    
+                <ListItem button onClick={() => scrollToSection('location')} >
+                    Location
+                </ListItem>
+            </List>
+        </Drawer>
+    )
+};
 
 export default SideDrawer;
