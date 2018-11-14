@@ -2,9 +2,6 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import DashboardPage from '../components/DashboardPage';
-import NotFoundPage from '../components/NotFoundPage';
-import LoginPage from '../components/LoginPage';
 import Header from '../components/Header';
 import Featured from '../components/Featured';
 import VenueInfo from '../components/VenueInfo';
@@ -12,8 +9,6 @@ import Highlights from '../components/Highlights';
 import Pricing from '../components/Pricing';
 import Location from '../components/Location';
 import Footer from '../components/Footer';
-import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRoute';
 
 export const history = createHistory();
 
